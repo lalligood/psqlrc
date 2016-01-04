@@ -7,9 +7,9 @@
 -- Suppress any output when setting options below
 \set QUIET
 
--- Customize prompt
-\set PROMPT1 '%[%033[33m%][%/] # '
-\set PROMPT2 '... # '
+-- Customize prompt: make prompt bold yellow & display DB name
+\set PROMPT1 '%[%033[1;33m%][%/] #%033[00m '
+\set PROMPT2 '%033[1;33m... #%033[00m '
 
 -- Show how long each query takes to execute
 \timing
