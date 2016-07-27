@@ -24,5 +24,8 @@
 -- Set editor
 \setenv EDITOR vim
 
+-- Replace null field result with '[NULL]'
+\pset null '[NULL]'
+
 -- Re-enable standard output
 \unset QUIET
