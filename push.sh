@@ -1,27 +1,21 @@
 #!/bin/bash
 # Create necessary symlink for psql
-currdir=`pwd`
 
-function create_refs {
-if [[ $2 == "" ]]; then
-    # Verify directory exists. Create it if it does not.
-    if [ ! -d $1 ]; then
-        echo $1 directory does not exist. Creating directory...
-        mkdir -v $1
-        echo $1 directory created successfully
-    else
-        echo $1 already exists. Skipping...
-    fi
-else
-    # Verify symlink exists. Create it if it does not.
-    if  [ ! -h $HOME/$1 ]; then
+currdir=`pwd`
+psqlrc=.psqlrc
+
+function create_symlink()
+# Create symlink to configuration file if it doesn't already exist
+{
+    src=${currdir}/$2
+    dest=$HOME/$1
+    if  [[ ! -h ${dest} ]]; then
         echo Symbolic link for $1 does not exist. Creating symlink...
-        ln -v -s $currdir/$2 $HOME/$1
+        ln -vs ${src} ${dest}
         echo Symbolic link for $1 created successfully.
     else
         echo Symbolic link for $1 already exists. Skipping...
     fi
-fi
 }
 
-create_refs .psqlrc .psqlrc
+create_symlink .psqlrc ${psqlrc}
