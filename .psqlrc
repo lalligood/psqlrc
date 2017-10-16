@@ -8,11 +8,11 @@
 \set QUIET
 
 -- Customize prompt: make prompt bold yellow & display DB name
-\set PROMPT1 '%[%033[1;33m%][%/] #%033[00m '
-\set PROMPT2 '%033[1;33m... #%033[00m '
+\set PROMPT1 '%033[1;35m(%/) =>%033[00m '
+\set PROMPT2 '%033[1;35m===>%033[00m '
 
 -- Show how long each query takes to execute
-\timing
+\timing ON
 
 -- Use best available output format
 \x auto
