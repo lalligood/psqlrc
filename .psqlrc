@@ -27,5 +27,11 @@
 -- Replace null field result with '[NULL]'
 \pset null '[NULL]'
 
+-- Make SQL output formatting a little prettier
+\pset linestyle 'unicode'
+\pset unicode_border_linestyle single
+\pset unicode_column_linestyle single
+\pset unicode_header_linestyle single
+
 -- Re-enable standard output
 \unset QUIET
