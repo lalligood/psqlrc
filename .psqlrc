@@ -7,8 +7,9 @@
 -- Suppress any output when setting options below
 \set QUIET
 
--- Customize prompt: make prompt bold yellow & display DB name
-\set PROMPT1 '%033[1;97;46m%m %/ (%:SERVER_VERSION_NAME:)%033[00m %# '
+-- Customize prompt
+-- Requires PGVERSION to be defined in .bashrc/.bash_profile/.pgsql_profile
+\set PROMPT1 '%033[1;97;46m%m %/ (%`echo $PGVERSION`)%033[00m %# '
 \set PROMPT2 '%033[1;97;46m---%033[00m %# '
 
 -- Show how long each query takes to execute
