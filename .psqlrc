@@ -30,9 +30,10 @@
 
 -- Make SQL output formatting a little prettier
 \pset linestyle 'unicode'
-\pset unicode_border_linestyle single
+\pset unicode_border_linestyle double
 \pset unicode_column_linestyle single
 \pset unicode_header_linestyle single
+\pset border 2
 
 -- Re-enable standard output
 \unset QUIET
