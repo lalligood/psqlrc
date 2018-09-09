@@ -1,7 +1,7 @@
 #!/bin/bash
 # Create necessary symlink for psql
 
-currdir=`pwd`
+currdir=$(pwd)
 psqlrc=.psqlrc
 
 function create_symlink()
