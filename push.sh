@@ -10,11 +10,11 @@ function create_symlink()
     src=${currdir}/$2
     dest=$HOME/$1
     if  [[ ! -h ${dest} ]]; then
-        echo Symbolic link for $1 does not exist. Creating symlink...
-        ln -vs ${src} ${dest}
-        echo Symbolic link for $1 created successfully.
+        echo Symbolic link for "$1" does not exist. Creating symlink...
+        ln -vs "${src}" "${dest}"
+        echo Symbolic link for "$1" created successfully.
     else
-        echo Symbolic link for $1 already exists. Skipping...
+        echo Symbolic link for "$1" already exists. Skipping...
     fi
 }
 
