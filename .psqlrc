@@ -16,11 +16,15 @@
 \timing ON
 
 -- Use best available output format
-\x auto
 \set VERBOSITY verbose
 \set HISTFILE ~/.psql_history- :DBNAME
 \set HISTCONTROL ignoredups
 \set COMP_KEYWORD_CASE upper
+
+-- Set pager (REQUIRES pspg TO BE INSTALLED!)
+\setenv PAGER 'pspg -X -s 5 -c 0 --less-status-bar -F'
+\set x '\\setenv PAGER less'
+\set xx '\\setenv PAGER \'pspg -X -s 5 -c 0 --less-status-bar -F\''
 
 -- Set editor
 \setenv EDITOR vim
